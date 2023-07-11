@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="https://excellent-tiara-b60.notion.site/Full-stack-engineer-assessment-0cb6cb5171bf4f6b8e0ea71ee0a5a436">
-    <img src="https://uploads-ssl.webflow.com/60066c7287d96dc62123c966/63334f79313aa01d173332ce_curbit%20logo%404x-p-800.png" alt="Logo" width="60" height="80">
+    <img src="https://uploads-ssl.webflow.com/60066c7287d96dc62123c966/63334f79313aa01d173332ce_curbit%20logo%404x-p-800.png" alt="Logo" width="80" height="60">
   </a>
 
 <h3 align="center">project_title</h3>
