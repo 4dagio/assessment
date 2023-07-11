@@ -1,14 +1,13 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="[https://excellent-tiara-b60.notion.site/Full-stack-engineer-assessment-0cb6cb5171bf4f6b8e0ea71ee0a5a436"](https://www.curbit.com/)>
+  <a href="https://www.curbit.com/">
     <img src="https://uploads-ssl.webflow.com/60066c7287d96dc62123c966/63334f79313aa01d173332ce_curbit%20logo%404x-p-800.png" alt="Logo" width="80" height="60">
   </a>
 
 <h3 align="center">Notification center</h3>
-
   <p align="center">
-   <a href="[https://github.com/github_username/repo_name](https://excellent-tiara-b60.notion.site/Full-stack-engineer-assessment-0cb6cb5171bf4f6b8e0ea71ee0a5a436)"><strong>Assessment Curbit</strong></a>
+   <a href="[https://excellent-tiara-b60.notion.site/Full-stack-engineer-assessment-0cb6cb5171bf4f6b8e0ea71ee0a5a436]"><strong>Assessment Curbit</strong></a>
     <br />
   </p>
 </div>
