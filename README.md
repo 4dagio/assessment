@@ -45,13 +45,22 @@
 
 Curbit needs to develop an ordering system that processes orders from different restaurants
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## Context
+
+![image](https://github.com/4dagio/assessment/assets/3275936/a23a4b68-9053-4999-9161-f46c278f660e)
+
+
+### Process description
+
+1. Restaurant generate orders from differents sources like: POS or KDC
+2. Orders add to service bus 
+3. Services OrdersEngine read the messages from queue to process approach the rules and status
+4. Service NotificationEngine read the messages from queue to update Order and notify to users when status is: 'prepared'||'ready'
+
 
 ### Built With
 
-* [![Node][Node.js]][https://nodejs.org/en/about]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+* [[Node]](https://nodejs.org/en/about)
 
 
 
