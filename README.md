@@ -62,6 +62,9 @@ Curbit needs to develop an ordering system that processes orders from different 
 
 * [[Node]](https://nodejs.org/en/about)
 
+### High-level architecture
+
+![image](https://github.com/4dagio/assessment/assets/3275936/faf1a616-440e-468f-a0ba-fabf34423692)
 
 
 <!-- GETTING STARTED -->
