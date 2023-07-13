@@ -36,10 +36,9 @@ Curbit needs to develop an ordering system that processes orders from different 
 
 ## High-level architecture
 
-![image](https://github.com/4dagio/assessment/assets/3275936/faf1a616-440e-468f-a0ba-fabf34423692)
+![image](https://github.com/4dagio/assessment/assets/3275936/60457db3-8be1-4938-907e-833ee7b62fd8)
 
 ### Notes: it is assumed that:
-
 
 1. The data source has the capacity to call rest or soap services.
 2. The amount of transactions are within the capacity of the premiere layer of the azure api management (approx. 100,000,000 calls each month).
@@ -158,11 +157,9 @@ namespace Company.Function
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+- [Johnny A. Gutierrez R](inkedin.com/in/alexander-gutierrez-1016) - 4dagio.01@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
