@@ -11,35 +11,6 @@
 </div>
 
 
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
-
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
@@ -66,7 +37,17 @@ Curbit needs to develop an ordering system that processes orders from different 
 
 ![image](https://github.com/4dagio/assessment/assets/3275936/faf1a616-440e-468f-a0ba-fabf34423692)
 
+### Notes: it is assumed that:
+
+
+1. The data source has the capacity to consume rest or soap services.
+2. The amount of transactions are within the capacity of the premiere layer of the azure api management (approx. 100,000,000 calls each month).
+3. Notifications will be sent to mobile devices.
+4. Observability will be enabled with AppInsights and Monitor.
+
 ### Explanation
+
+
 
 ### NFR
 
