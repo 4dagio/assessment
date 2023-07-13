@@ -31,7 +31,7 @@ Curbit needs to develop an ordering system that processes orders from different 
 
 ### Built With
 
-* [[C#]]([https://nodejs.org/en/about](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/local-functions))
+* [[C#]](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/local-functions)
 * [[Azure]](https://azure.microsoft.com/en-us/solutions/open-source/?&ef_id=_k_Cj0KCQjwnrmlBhDHARIsADJ5b_mwBe0ocBrasJ-l6VPy9GryG6Kxal_q1vXCt9A9QKQIGYdcbfNIAzgaAqBGEALw_wcB_k_&OCID=AIDcmm3804ythc_SEM__k_Cj0KCQjwnrmlBhDHARIsADJ5b_mwBe0ocBrasJ-l6VPy9GryG6Kxal_q1vXCt9A9QKQIGYdcbfNIAzgaAqBGEALw_wcB_k_&gclid=Cj0KCQjwnrmlBhDHARIsADJ5b_mwBe0ocBrasJ-l6VPy9GryG6Kxal_q1vXCt9A9QKQIGYdcbfNIAzgaAqBGEALw_wcB)
 
 ## High-level architecture
@@ -78,8 +78,7 @@ In this case, I include terms such as Order, Restaurant, User, Status, Queue, No
 ## Codebase
 
 For development this project we can use **Hexagonal Architecture**, is driven by the idea that the application is central to your system. All inputs and outputs reach or leave the core of the application through a port that isolates the application from external technologies, tools and delivery mechanics
-
-i can use this template to codeBase:
+I can use this template to codeBase:
 [Hexagonal Architecture](https://github.com/Amitpnk/Hexagonal-architecture-ASP.NET-Core)
 
 
@@ -158,8 +157,3 @@ namespace Company.Function
 ## Contact
 
 - [Johnny A. Gutierrez R](inkedin.com/in/alexander-gutierrez-1016) - 4dagio.01@gmail.com
-
-
-
-
-
