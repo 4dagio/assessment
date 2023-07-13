@@ -25,7 +25,7 @@ Curbit needs to develop an ordering system that processes orders from different 
 
 1. Restaurants generates orders from differents sources like: POS or KDC
 2. Orders add to service bus 
-3. Services OrdersEngine read the messages from queue to process according the rules and status
+3. Service OrdersEngine read the messages from queue to process according the rules and status
 4. Service NotificationEngine read the messages from queue to update Order and notify users when status is: 'prepared'||'ready'
 
 
