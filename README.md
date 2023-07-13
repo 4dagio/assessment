@@ -23,10 +23,10 @@ Curbit needs to develop an ordering system that processes orders from different 
 
 ### Process description
 
-1. Restaurant generate orders from differents sources like: POS or KDC
+1. Restaurants generates orders from differents sources like: POS or KDC
 2. Orders add to service bus 
-3. Services OrdersEngine read the messages from queue to process approach the rules and status
-4. Service NotificationEngine read the messages from queue to update Order and notify to users when status is: 'prepared'||'ready'
+3. Services OrdersEngine read the messages from queue to process according the rules and status
+4. Service NotificationEngine read the messages from queue to update Order and notify users when status is: 'prepared'||'ready'
 
 
 ### Built With
@@ -77,7 +77,7 @@ In this case, I include terms such as Order, Restaurant, User, Status, Queue, No
 <!-- GETTING STARTED -->
 ## Codebase
 
-For development this project we can use **Hexagonal Architecture**, is driven by the idea that the application is central to your system. All inputs and outputs reach or leave the core of the application through a port that isolates the application from external technologies, tools and delivery mechanics
+To developed this project it can be used **Hexagonal Architecture**, is driven by the idea that the application is central to your system. All inputs and outputs reach or leave the core of the application through a port that isolates the application from external technologies, tools and delivery mechanics
 I can use this template to codeBase:
 [Hexagonal Architecture](https://github.com/Amitpnk/Hexagonal-architecture-ASP.NET-Core)
 
