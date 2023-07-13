@@ -31,7 +31,8 @@ Curbit needs to develop an ordering system that processes orders from different 
 
 ### Built With
 
-* [[Node]](https://nodejs.org/en/about)
+* [[C#]]([https://nodejs.org/en/about](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/local-functions))
+* [[Azure]](https://azure.microsoft.com/en-us/solutions/open-source/?&ef_id=_k_Cj0KCQjwnrmlBhDHARIsADJ5b_mwBe0ocBrasJ-l6VPy9GryG6Kxal_q1vXCt9A9QKQIGYdcbfNIAzgaAqBGEALw_wcB_k_&OCID=AIDcmm3804ythc_SEM__k_Cj0KCQjwnrmlBhDHARIsADJ5b_mwBe0ocBrasJ-l6VPy9GryG6Kxal_q1vXCt9A9QKQIGYdcbfNIAzgaAqBGEALw_wcB_k_&gclid=Cj0KCQjwnrmlBhDHARIsADJ5b_mwBe0ocBrasJ-l6VPy9GryG6Kxal_q1vXCt9A9QKQIGYdcbfNIAzgaAqBGEALw_wcB)
 
 ## High-level architecture
 
@@ -77,7 +78,82 @@ In this case, I include terms such as Order, Restaurant, User, Status, Queue, No
 <!-- GETTING STARTED -->
 ## Codebase
 
+For development this project we can use **Hexagonal Architecture**, is driven by the idea that the application is central to your system. All inputs and outputs reach or leave the core of the application through a port that isolates the application from external technologies, tools and delivery mechanics
 
+i can use this template to codeBase:
+[Hexagonal Architecture](https://github.com/Amitpnk/Hexagonal-architecture-ASP.NET-Core)
+
+
+```cs
+using Microsoft.Azure.WebJobs;
+using Microsoft.Azure.WebJobs.Host;
+using Microsoft.Extensions.Logging;
+using Microsoft.Azure.Cosmos;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+
+namespace Company.Function
+{
+    public static class OrderEngine
+    {
+        private static readonly string EndpointUri = "uri-test";
+        private static readonly string PrimaryKey = "primary-key";
+        private static CosmosClient cosmosClient = new CosmosClient(EndpointUri, PrimaryKey);
+        private static Database database = cosmosClient.GetDatabase("Orders");
+        private static Container container = database.GetContainer("container_orders");
+
+        [FunctionName("OrderEngine")]
+        public static async Task Run([ServiceBusTrigger("placed", Connection = "AzureWebJobsServiceBus")]string myQueueItem, ILogger log)
+        {
+            log.LogInformation($"C# ServiceBus queue trigger function processed message: {myQueueItem}");
+
+            // Parse the queue item as your data model
+            var order = JsonConvert.DeserializeObject<Order>(myQueueItem);
+            if (order != null)
+            {
+                await InsertOrder(order);
+            }
+        }
+
+        private static async Task InsertOrder(Order order)
+        {
+            try
+            {
+                ItemResponse<Order> orderResponse = await container.CreateItemAsync<Order>(order, new PartitionKey(order.Id));
+            }
+            catch (CosmosException ex) when (ex.StatusCode == System.Net.HttpStatusCode.Conflict)
+            {
+                // A conflict means that an order with the same id already exists. Handle appropriately.
+            }
+        }
+    }
+
+    public class Order
+    {
+        [JsonProperty(PropertyName = "id")]
+        public string Id { get; set; }
+
+        [JsonProperty(PropertyName = "restaurantId")]
+        public string RestaurantId { get; set; }
+
+        [JsonProperty(PropertyName = "sourceId")]
+        public string SourceId { get; set; }
+
+        [JsonProperty(PropertyName = "storeName")]
+        public string StoreName { get; set; }
+
+        [JsonProperty(PropertyName = "userName")]
+        public string UserName { get; set; }
+
+        [JsonProperty(PropertyName = "observation")]
+        public string Observation { get; set; }
+
+        [JsonProperty(PropertyName = "timeReady")]
+        public string TimeReady { get; set; }
+    }
+}
+
+```
 
 <!-- CONTACT -->
 ## Contact
