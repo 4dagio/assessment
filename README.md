@@ -156,4 +156,4 @@ namespace Company.Function
 <!-- CONTACT -->
 ## Contact
 
-- [Johnny A. Gutierrez R](inkedin.com/in/alexander-gutierrez-1016) - 4dagio.01@gmail.com
+- [Johnny A. Gutierrez R](linkedin.com/in/alexander-gutierrez-1016) - 4dagio.01@gmail.com
